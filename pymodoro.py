@@ -10,13 +10,15 @@ def mainMenu():
 def options(termSize):
     workTimer = printCenteredWithInput("How long should work periods be?", termSize)
     breakTimer = printCenteredWithInput("How long should break periods be?", termSize)
-    timers = [workTimer, breakTimer]
+    timers = [workTimer.rstrip(), breakTimer.rstrip()]
     timers = optionsQuickPick(timers)
     return timers
 
 def optionsQuickPick(timers):
     timers[0] = 25 if timers[0] == '' else timers[0]
     timers[1] = 5 if timers[1] == '' else timers[1]
+    print(timers)
+    input()
     return timers
 
 def printTopQuarter(text, size):
