@@ -17,8 +17,6 @@ def options(termSize):
 def optionsQuickPick(timers):
     timers[0] = 25 if timers[0] == '' else timers[0]
     timers[1] = 5 if timers[1] == '' else timers[1]
-    print(timers)
-    input()
     return timers
 
 def printTopQuarter(text, size):
